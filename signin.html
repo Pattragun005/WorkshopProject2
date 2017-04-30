@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/cursor.css">
+		<title>Signin</title>
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/loader.css">
+	</head>
+	<body background="https://w-dog.net/wallpapers/8/1/297546382309037/plane-airplane-sky-sky-clouds-clouds-flight-flight-wing-aircraft-wing-aircraft-wallpaper.jpg">
+		<div class="loader"></div>
+		<div id="app">
+			<nav class="navbar navbar-default navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+						<span class="sr-only">Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html"><i class="glyphicon glyphicon-home" aria-hidden="true"> HOME</i></a>
+					</div>
+					<div class="collapse navbar-collapse" id="app-navbar-collapse">
+						<ul class="nav navbar-nav">&nbsp;</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="signin.html">Log-In</a></li>
+							<li><a href="signup.html">Sign Up</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="container">
+				<div class="row">
+
+						<font color="white"><h1>
+							<center>&nbsp;<i>Member Log-in<br></center>
+							</i>
+						</h1>
+
+					<div class="col-md-8 col-md-offset-4">
+
+
+							<div class="container">
+								<form id="form" class="form-horizontal" action="" method="POST" role="form">
+									<div class="form-group">
+										<div class="col-md-5">
+										<label for="username" class="col-md-1 control-label">Username</label>
+											<input type="text" class="form-control" id="username" name="username" placeholder="Please enter a username here." maxlength="12" autofocus>
+											</div>
+										<br>
+									</div>
+									<div class="form-group">
+										<div class="col-md-5">
+										<label for="password" class="col-md-1 control-label">Password</label>
+
+											<input type="password" class="form-control" id="password" name="password" placeholder="Please enter a password here." maxlength="12">
+										</div>
+										<br><br>
+									</div>
+									<div class="form-group">
+										<div class="col-md-6 col-md-offset-2">
+												<a href="#"><button type="submit" id="signin" name="button" onclick="create()" class="float-left submit-button">
+												Log-in</button></a>
+
+													<span><br><br>Not a Gunnie Airline Member?</span>&nbsp;
+													<a href="signup.html"><button type="button" class="btn btn-success badge">Join now</button></a>
+										</div></font>
+									</div>
+								</form>
+							</div>
+
+
+
+						<div id="err" style="display:none" class="alert alert-danger alert-dismissable fade in">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+							<strong>incorrect username or password please try again</strong><br>
+							<span style="color:blue;font-weight:bold" id="summary"></span>
+						</div>
+						<div id="suc" style="display:none" class="alert alert-success alert-dismissable fade in">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+							<strong>login successfully</strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/cache.js"></script>
+		<script type="text/javascript" src="js/loader.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/singins.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript">
+			function create() {
+			    $.cookie('keep', 'user data');
+			    console.log($.cookie('keep'));
+			}
+		</script>
+	</body>
+</html>
